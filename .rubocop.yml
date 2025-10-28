@@ -74,5 +74,7 @@ Lint/AssignmentInCondition:
   Enabled: false
 
 # メソッド名等の命名の指摘
-Naming/PredicateName:
+Naming/PredicatePrefix:
+  Enabled: true
+Naming/PredicateMethod:
   Enabled: true
