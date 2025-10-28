@@ -40,4 +40,4 @@ jobs:
           bundle exec rubocop --show-cops || true
 
       - name: Run RuboCop
-        run: bundle exec rubocop
+        run: bundle exec rubocop --config .rubocop.yml
