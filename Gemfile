@@ -38,3 +38,10 @@ gem 'padrino', '0.15.3'
 gem "rack", "< 3"
 
 gem 'puma'
+
+# lint
+group :development do
+  gem 'rubocop', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rake', require: false
+end

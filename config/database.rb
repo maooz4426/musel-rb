@@ -16,19 +16,19 @@
 #   }
 #
 ActiveRecord::Base.configurations = {
-  :development => {
-    :adapter => 'sqlite3',
-    :database => Padrino.root('db', 'musel_rb_development.db')
+  development: {
+    adapter: 'sqlite3',
+    database: Padrino.root('db', 'musel_rb_development.db')
 
   },
-  :production => {
-    :adapter => 'sqlite3',
-    :database => Padrino.root('db', 'musel_rb_production.db')
+  production: {
+    adapter: 'sqlite3',
+    database: Padrino.root('db', 'musel_rb_production.db')
 
   },
-  :test => {
-    :adapter => 'sqlite3',
-    :database => Padrino.root('db', 'musel_rb_test.db')
+  test: {
+    adapter: 'sqlite3',
+    database: Padrino.root('db', 'musel_rb_test.db')
 
   }
 }
