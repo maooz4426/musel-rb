@@ -1,6 +1,8 @@
-RACK_ENV = 'test' unless defined?(RACK_ENV)
-require File.expand_path(File.dirname(__FILE__) + "/../config/boot")
-Dir[File.expand_path(File.dirname(__FILE__) + "/../app/helpers/**/*.rb")].each(&method(:require))
+RACK_ENV = 'test'.freeze unless defined?(RACK_ENV)
+require File.expand_path("#{File.dirname(__FILE__)}/../config/boot")
+Dir[File.expand_path("#{File.dirname(__FILE__)}/../app/helpers/**/*.rb")].each do |file|
+  require file
+end
 
 RSpec.configure do |conf|
   conf.include Rack::Test::Methods
@@ -15,7 +17,7 @@ end
 #     set :foo, :bar
 #   end
 #
-def app(app = nil, &blk)
-  @app ||= block_given? ? app.instance_eval(&blk) : app
+def app(app = nil, &)
+  @app ||= block_given? ? app.instance_eval(&) : app
   @app ||= Padrino.application
 end
