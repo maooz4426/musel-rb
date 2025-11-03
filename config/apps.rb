@@ -34,5 +34,5 @@ end
 
 # Mounts the core application for this project
 # api/で叩けるようにするためにこの順番で追加
-Padrino.mount('API', :app_file => Padrino.root('api/api.rb'), :app_class => 'Musel::API').to('/api')
+Padrino.mount('API', app_file: Padrino.root('api/api.rb'), app_class: 'Musel::API').to('/api')
 Padrino.mount('Musel::App', app_file: Padrino.root('app/app.rb')).to('/')

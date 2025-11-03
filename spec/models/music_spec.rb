@@ -3,7 +3,7 @@ require 'database_cleaner/active_record'
 
 RSpec.describe Music do
   describe '#create' do
-    context "ulid生成" do
+    context 'ulid生成' do
       it '成功' do
         music = build(:music)
         music.save

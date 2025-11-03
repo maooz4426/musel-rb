@@ -8,7 +8,6 @@ module Musel
     ## Rack::Protection::AuthenticityTokenを開発環境では無効に
     # disable :protect_from_csrf if RACK_ENV == 'development'
 
-
     ##
     # Caching support.
     #

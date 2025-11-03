@@ -27,7 +27,6 @@ RSpec.configure do |conf|
   end
 end
 
-
 # You can use this method to custom specify a Rack app
 # you want rack-test to invoke:
 #
@@ -41,4 +40,3 @@ def app(app = nil, &)
   @app ||= block_given? ? app.instance_eval(&) : app
   @app ||= Padrino.application
 end
-
