@@ -5,5 +5,5 @@
 :script: none
 :renderer: none
 :stylesheet: none
-:namespace: MuselRb
+:namespace: Musel
 :migration_format: number
