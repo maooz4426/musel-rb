@@ -21,5 +21,9 @@ jobs:
         run: bundle install
       - name: Run RuboCop
         run: bundle exec rubocop
+      - name: Setup Database
+        run: |
+          bundle exec rake db:create
+          bundle exec rake db:migrate
       - name: Test
         run: bundle exec rspec
