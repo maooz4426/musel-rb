@@ -29,8 +29,10 @@ Padrino.configure_apps do
   # enable :sessions
   set :session_secret, '7dbd3f81b4ddcb324c10f151d3f47199edb7fab4f3c7afca4cd3153846df32a7'
   set :protection, except: :path_traversal
-  set :protect_from_csrf, true
+  set :protect_from_csrf, false
 end
 
 # Mounts the core application for this project
+# api/で叩けるようにするためにこの順番で追加
+Padrino.mount('API', app_file: Padrino.root('api/api.rb'), app_class: 'Musel::API').to('/api')
 Padrino.mount('Musel::App', app_file: Padrino.root('app/app.rb')).to('/')

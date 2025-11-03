@@ -1,0 +1,15 @@
+<h1>Music List</h1>
+<table border="1">
+  <tr>
+    <td>Title</td>
+    <td>Artist</td>
+    <td>BPM</td>
+  </tr>
+  <% @musics.each do |music| %>
+    <tr>
+      <td><%= music.title %></td>
+      <td><%= music.artist %></td>
+      <td><%= music.bpm %></td>
+    </tr>
+  <% end %>
+</table>

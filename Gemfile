@@ -17,8 +17,8 @@ source 'https://rubygems.org'
 gem 'rake'
 
 # Component requirements
-gem 'activerecord', '>= 3.1', :require => 'active_record'
-gem 'sqlite3'
+gem 'activerecord', '~> 7.0.0', require: 'active_record'
+gem 'sqlite3', '~> 1.4'
 
 # Test requirements
 gem 'rspec', :group => 'test'
@@ -44,4 +44,16 @@ group :development do
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rake', require: false
+end
+
+gem 'ulid'
+
+gem 'grape'
+gem 'grape-active_model_serializers'
+gem 'padrino-grape', github: 'adamluzsi/padrino-grape'
+
+group :test do
+  gem 'database_cleaner-active_record'
+  gem 'factory_bot'
+  gem 'airborne'
 end
